@@ -1,4 +1,4 @@
-package com.mark.msscurso.hrworker;
+package com.mark.mscurso.hrworker;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
