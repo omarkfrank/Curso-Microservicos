@@ -2,14 +2,13 @@ package com.mark.msscurso.hruser;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
-@EnableEurekaClient
+@EnableDiscoveryClient
 @SpringBootApplication
-public class HrUserApplication {
+public class HrUser1Application {
 
 	public static void main(String[] args) {
-		SpringApplication.run(HrUserApplication.class, args);
+		SpringApplication.run(HrUser1Application.class, args);
 	}
-
 }
