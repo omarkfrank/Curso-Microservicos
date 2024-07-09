@@ -20,7 +20,6 @@ public class HrUserApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-		//System.out.println("BCRYPT = " + passwordEncoder.encode("123456")); Aqui esse metodo encode, vai pegar o valor string informado e vai gerar o HashBCrypt dele. 
-
+		//System.out.println("BCRYPT = " + passwordEncoder.encode("123456")); Aqui esse metodo encode, vai pegar o valor string informado e vai gerar o HashBCrypt dele.
 	}
 }
