@@ -22,8 +22,8 @@ public class ResourceServerConfig extends ResourceServerConfigurerAdapter {
 	private static final String[] OPERATOR = {
 			"hr-worker/**" }; /* Configuração rota com autorização de perfil OPERADOR/Administrador. */
 
-	private static final String[] ADMIN = {
-			"/hr-payroll/**" }; /* Configuração de rota com autorização de perfil ADMIN. */
+	private static final String[] ADMIN = { "/hr-payroll/**", "/hr-user/**", "/actuator/**", "/hr-worker/actuator/**",
+			"/hr-oauth/actuator/**" }; /* Configuração de rota com autorização de perfil ADMIN. */
 
 	@Override
 	public void configure(ResourceServerSecurityConfigurer resources) throws Exception {
@@ -33,7 +33,7 @@ public class ResourceServerConfig extends ResourceServerConfigurerAdapter {
 	@Override
 	public void configure(HttpSecurity http) throws Exception {
 
-		/*Configuração de perfil de acesso*/
+		/* Configuração de perfil de acesso */
 		http.authorizeRequests().antMatchers(PUBLIC).permitAll().antMatchers(HttpMethod.GET, OPERATOR)
 				.hasAnyRole("OPERATOR", "ADMIN").antMatchers(ADMIN).hasRole("ADMIN").anyRequest().authenticated();
 	}
